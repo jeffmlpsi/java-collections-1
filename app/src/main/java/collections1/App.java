@@ -27,28 +27,13 @@ public class App {
             System.out.println(name);
         }
         
-        class MyCatInto {
-            String name;
-            int age;
-            String catType;
-
-            MyCatInto(String name, int age, String catType) {
-                this.name = name;
-                this.age = age;
-                this.catType = catType;
-            }
-
-            @Override
-            public String toString() {
-                return "name='" + name + "', age=" + age + ", catType='" + catType + "'";
-            }
-        }
-        MyCatInto[] cats = {
-            new MyCatInto("Whiskers", 2, "Siamese"),
-            new MyCatInto("Mittens", 3, "Persian"),
-            new MyCatInto("Shadow", 1, "Maine")
+      
+        MyCatInfo[] cats = {
+            new MyCatInfo("Whiskers", 2, "Siamese"),
+            new MyCatInfo("Mittens", 3, "Persian"),
+            new MyCatInfo("Shadow", 1, "Maine")
         };
-        for (MyCatInto cat : cats) {
+        for (MyCatInfo cat : cats) {
             System.out.println(cat);    
         }
     }   

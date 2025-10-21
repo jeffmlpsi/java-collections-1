@@ -6,6 +6,8 @@ package collections1;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Iterator;
+
 class AppTest {
     @Test void appHasAGreeting() {
         App classUnderTest = new App();
@@ -13,5 +15,34 @@ class AppTest {
     }
     @Test void testBasicArraysExample() {
         App.basicArraysExample();
+    }
+
+    @Test void testIterableExample() {
+        IterableExample iterable = new IterableExample();
+        iterable.add("One");
+        iterable.add("Two");
+        iterable.add("Three");
+
+        iterable.forEach(item -> System.out.println(item));
+        for (String item : iterable) {
+            System.out.println(item);
+        }
+        
+        Iterator<String> its = iterable.iterator();
+        while (its.hasNext()) {
+            System.out.println(its.next());
+        }       
+    }
+
+    @Test void testSetExample() {
+        IteratableCollections.setExample();
+    }
+
+    @Test void testListExample() {
+        IteratableCollections.listExample();
+    }
+
+    @Test void testQueueExample() {
+        IteratableCollections.queueExample();
     }
 }
